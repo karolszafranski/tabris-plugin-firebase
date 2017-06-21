@@ -31,8 +31,11 @@ if (rootdir) {
       var registerReplace = "self.client.delegate = self;"
       replace(appDelegate, importReplace, importReplace + "\n#import <FirebaseAnalytics/FirebaseAnalytics.h>");
       replace(appDelegate, importReplace, importReplace + "\n#import \"ESFBAnalytics.h\"");
+      replace(appDelegate, importReplace, importReplace + "\n#import \"ESFBMessaging.h\"");
       replace(appDelegate, registerReplace, "[self.client addRemoteObject:[ESFBAnalytics class]];" + "\n\t" + registerReplace);
+      replace(appDelegate, registerReplace, "[self.client addRemoteObject:[ESFBMessaging class]];" + "\n\t" + registerReplace);
       replace(appDelegate, registerReplace, registerReplace + "\n\t[FIRApp configure];");
+      replace(appDelegate, registerReplace, registerReplace + "\n\t[ESFBMessaging registerForNotifiations];");
     };
 
     updateIOSAppDelegate();

@@ -106,12 +106,15 @@
     <!-- Messaging -->
     <framework src="src/ios/frameworks/FirebaseMessaging.framework" custom="true" />
     <framework src="src/ios/frameworks/Protobuf.framework" custom="true" />
+    <framework src="UserNotifications.framework" />
 
     <!-- Sources -->
     <!-- Analytics -->
     <header-file src="src/ios/src/ESFBAnalytics.h" />
     <source-file src="src/ios/src/ESFBAnalytics.m" />
     <!-- Messaging -->
+    <header-file src="src/ios/src/ESFBMessaging.h" />
+    <source-file src="src/ios/src/ESFBMessaging.m" />
 
     <!-- Resources -->
     <resource-file src="src/ios/resources/GoogleService-Info.plist" />
